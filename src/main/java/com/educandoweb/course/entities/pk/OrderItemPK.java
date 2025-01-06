@@ -1,9 +1,12 @@
 package com.educandoweb.course.entities.pk;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import com.educandoweb.course.entities.Order;
+import com.educandoweb.course.entities.OrderItem;
 import com.educandoweb.course.entities.Product;
 
 import jakarta.persistence.Embeddable;
@@ -34,6 +37,7 @@ public class OrderItemPK implements Serializable {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
