@@ -18,8 +18,6 @@ import com.educandoweb.course.entities.User;
 import com.educandoweb.course.services.UserService;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
-
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
@@ -57,5 +55,4 @@ public class UserResource {
 		obj = service.update(id, obj);
 		return ResponseEntity.ok().body(obj);
 	}
-
 }
